@@ -29,7 +29,7 @@ let erase = false;
 
 const isTouchDevice = () => {
     try {
-        document.createEvent("TouchEvent");
+        document.createEvent("Touch");
         deviceType = "touch";
         return true;
     } catch (e) {
@@ -52,7 +52,7 @@ gridButton.addEventListener("click", ()=>{
             count += 2;  
             let col = document.createElement("div");
             div.classList.add("gridCol");
-            col.setAttribute("id", `gridCol${count}`);
+            col.setAttribute("id", `gridCol ${count}`);
             col.addEventListener(events[deviceType].down, ()=>{
                 draw = true;
                 if (erase) {
@@ -70,6 +70,8 @@ gridButton.addEventListener("click", ()=>{
                 ).id;
                 checker (elementId);
             });
+
+            
             col.addEventListener(events[deviceType].up, ()=> {
             draw = false;
             });
