@@ -5,6 +5,7 @@ const passwordInput = document.querySelector(".input-box input");
 const passIndicator = document.querySelector(".pass-indicator");
 const generateBtn = document.querySelector(".generate-btn");
 
+//Building blocks of the passwordInput
 const characters = {
     lowercase: "abcdefghijklmnopqrstuvwxyz",
     uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -15,7 +16,7 @@ const characters = {
 const generatePassword = () => {
     let staticPassword = "",
         randomPassword = "",
-        excludeDuplicate = false,
+        excludeDuplicate = false,yes
         passLength = lengthSlider.value;
 
     options.forEach(option => {
