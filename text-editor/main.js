@@ -25,7 +25,7 @@ const intializer = () => {
     highlighter(formatButtons, false);
     highlighter(scriptButtons, true);
 
-    fontList.map((value) => {
+    fontList.forEach((value) => {
         let option = document.createElement("option");
         option.value = value;
         option.innerHTML = value;

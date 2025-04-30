@@ -38,4 +38,5 @@ function initBattery() {
         batt.addEventListener("chargingchange", () => { updateBattery() });
         batt.addEventListener("levelchange", () => { updateBattery });
     })
+    error("error", error)
 }
