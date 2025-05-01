@@ -17,3 +17,22 @@ height.addEventListener("input", calculateWidth);
 width.addEventListener("input", calculateHeight);
 ratioHeight.addEventListener("input", calculateWidth);
 ratioWidth.addEventListener("input", calculateHeight);
+
+
+
+calculateHeight = () => {
+    let aspectRatio = gridHeight.value/gridWidth.value
+height.value = parseFloat(width.value / (aspectRatio).toFixed(2) );
+
+}
+
+calculateWidth = () => {
+    let aspectRatio = gridWidth.value/gridHeight.value;
+    width.value = parseFloat(height.value * aspectRatio.toFixed(2))
+}
+
+ratioHeight.addEventListener("input", calculateWidth)
+ratioWidth.addEventListener("input", calculateHeight)
+
+height.addEventListener("input", calculateWidth)
+width.addEventListener("input", calculateHeight)

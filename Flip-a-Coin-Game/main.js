@@ -8,12 +8,12 @@ flipBtn.addEventListener("click", () => {
     let i = Math.floor(Math.random() * 2);
     coin.style.animation = "none";
     if (i) {
-        setTimeout(function () {
+        setTimeout( ()=> {
             coin.style.animation = "spin-heads 3s forwards";
         }, 100);
         heads++;
     } else {
-        setTimeout(function () {
+        setTimeout( ()=> {
             coin.style.animation = "spin-tails 3s forwards";
         }, 100);
         tails++;
@@ -29,7 +29,7 @@ function updateStats() {
 
 function disableButton() {
     flipBtn.disabled = true;
-    setTimeout(function () {
+    setTimeout( ()=> {
         flipBtn.disabled = false;
     }, 3000);
 }
@@ -40,3 +40,38 @@ resetBtn.addEventListener("click", () => {
     tails = 0;
     updateStats();
 })
+
+
+flipCoin.addEventListener("click",() =>{
+coin.style.animate = "none"
+let i = Math.floor(Math.random()*2)
+if (i){
+    setTimeout(()=>{
+        coin.style.animation = "spin-heads 3s forwards";
+    },100)
+    head++;
+} else {
+    setTimeout(()=>{
+ coin.style.animation = "spin-heads 3s forwards"
+    },100) 
+    tails++;
+}
+updateStats()
+disableButton()
+
+})
+
+function updateStats () {
+document.getElementById('heads-count').textContent
+= `Heads: ${heads}`
+
+document.getElementById('button-count').
+textContent = `Heads: ${tails}`
+}
+
+function disableButton () {
+    flipBtn.disabled = true;
+    setTimeout( ()=> {
+        flipBtn.disabled = false;
+    }, 3000);
+}
