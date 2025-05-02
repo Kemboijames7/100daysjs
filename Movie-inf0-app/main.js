@@ -21,6 +21,8 @@ let getMovie = () => {
                 result.innerHTML = `
                     <div class="info">
                         <img src=${data.Poster} class="poster">
+                        <div><div class="info">
+                        <img src=${data.Poster} class="poster">
                         <div>
                             <h2>${data.Title}</h2>
                             <div class="rating">
@@ -58,3 +60,28 @@ let getMovie = () => {
 
 searchBtn.addEventListener("click", getMovie);
 window.addEventListener("load", getMovie);
+
+let movieName = movieNameRef.value;
+let url = `http://www.omdbapi.com/?t=${movieName}&apikey=${key}`;
+//if input field is empty
+
+if (movieName.length<=0) {
+    result.innerHTML = `<h3 class="msg">Please enter a movie name </h3>`
+} else {
+    fetch(url).then((res)=>{res.json()}).then((data)=>{
+        if(data.Response == "true") {
+            result.innerHTML = `
+            <div> ${data.title} </div>
+             <div class="genre">
+                                <div>${data.Genre.split(",").join("</div><div>")}</div>
+                            </div>
+            `
+
+         
+        }
+        else{
+           result.innerHTML = `<h1> ${data.error}</h1>`
+        }
+      
+    })
+}
