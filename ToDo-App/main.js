@@ -15,6 +15,8 @@ filters.forEach(btn => {
     });
 });
 
+
+
 function showTodo(filter) {
     let liTag = "";
     if (todos) {
