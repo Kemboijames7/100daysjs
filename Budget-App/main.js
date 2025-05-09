@@ -10,6 +10,7 @@ const amount = document.getElementById("amount");
 const expenditureValue = document.getElementById("expenditure-value");
 const balanceValue = document.getElementById("balance-amount");
 const list = document.getElementById("list");
+
 let tempAmount = 0;
 
 // Set Budget Functions
