@@ -1,0 +1,1 @@
+how to code a guess the word game with javascript. this game also is responsive❗️

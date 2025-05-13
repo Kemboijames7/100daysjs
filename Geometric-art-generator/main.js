@@ -18,7 +18,7 @@ const boxes = document.querySelectorAll(".container div");
 const container = document.querySelectorAll(".wrapper container");
 
 let generatePattern = () => {
-    container.
+   
     boxes.forEach((box) => {
         box.className = "";
 
