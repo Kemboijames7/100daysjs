@@ -1,0 +1,1 @@
+how to code a simon game with javascript. this game's javascript code is fully commented❗️
