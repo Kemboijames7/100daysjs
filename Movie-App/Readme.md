@@ -1,0 +1,1 @@
+ how to code a Movie App using JavaScript. I'm using TheMovieDB api to get movies info. Also this code is fully responsive and when you scroll it will load more result
